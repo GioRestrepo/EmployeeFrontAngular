@@ -1,0 +1,76 @@
+<section class="form">
+  <h4>Registrarse</h4>
+  <input
+    class="controls"
+    type="text"
+    name="Nombre"
+    id="Nombre"
+    [(ngModel)]="data.name"
+    placeholder="Ingrese los nombres"
+  />
+  <input
+    class="controls"
+    type="text"
+    name="Apellidos"
+    id="Apellidos"
+    [(ngModel)]="data.lastName"
+    placeholder="Ingrese los apellidos"
+  />
+  <input
+    class="controls"
+    type="email"
+    name="Correo"
+    id="Correo"
+    [(ngModel)]="data.email"
+    placeholder="Ingrese la correo"
+  />
+  <input
+    class="controls"
+    type="text"
+    name="Identification"
+    id="identificacion"
+    [(ngModel)]="data.identification"
+    placeholder="Ingrese la identification"
+  />
+  <input
+    class="controls"
+    type="number"
+    name="Salary"
+    id="salary"
+    [(ngModel)]="data.salary"
+    placeholder="Ingrese el salario"
+  />
+  <input
+    class="controls"
+    type="number"
+    name="age"
+    id="age"
+    [(ngModel)]="data.age"
+    placeholder="Ingrese la edad"
+  />
+
+  <select class="form-select " aria-label="Default select example" [(ngModel)]="data.gender">
+    <option value="Masculino">Masculino</option>
+    <option value="Femenino">Femenino</option>
+    <option value="Otro">Otro</option>
+  </select>
+  
+  <input
+    class="controls my-3"
+    type="text"
+    name="role"
+    id="role"
+    [(ngModel)]="data.role"
+    placeholder="Ingrese el cargo"
+  />  
+  <input
+    class="controls"
+    type="number"
+    name="yearsInCompany"
+    id="yearsInCompany"
+    [(ngModel)]="data.yearsInCompany"
+    placeholder="Años en la compañia"
+  />  
+
+  <input class="botons" type="submit" value="Registrarse" (click)="createUser()" />
+</section>

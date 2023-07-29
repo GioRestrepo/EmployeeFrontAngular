@@ -1,0 +1,29 @@
+<section class="form">
+  <h4>Registrarse</h4>
+  <input
+    class="controls"
+    type="text"
+    name="name"
+    id="name"
+    placeholder="Ingrese su nombre"
+    [(ngModel)]="data.name"
+  />  
+  <input
+    class="controls"
+    type="email"
+    name="Correo"
+    id="Correo"
+    placeholder="Ingrese su correo"
+    [(ngModel)]="data.email"
+  />
+  <input
+    class="controls"
+    type="password"
+    name="Contraseña"
+    id="Contraseña"
+    placeholder="Ingrese su contraseña"
+    [(ngModel)]="data.password"
+  />
+
+  <input class="botons" type="submit" value="Iniciar Sesión" (click)="register()" />
+</section>
