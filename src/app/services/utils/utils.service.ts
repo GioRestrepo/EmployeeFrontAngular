@@ -36,7 +36,7 @@ export class UtilsService {
   }
 
   exportToExcel(employees: EmployeesModel[]): void {
-    let name: string = `EmployeesList-${Date.now}.xlsx`;
+    let name: string = `EmployeesList-${Date.now().toString()}.xlsx`;
     let element = document.getElementById('season-tble');
     const worksheet: XLSX.WorkSheet = XLSX.utils.json_to_sheet(employees);
 
