@@ -25,16 +25,20 @@
         <td>{{employee.yearsInCompany}}</td>
         <td>{{employee.active ? 'Activo' : 'Inactivo'}}</td>
         <td>
-          <button class="btn btn-primary" (click)="updateproduct(employee.identification)">
+          <button class="btn btn-primary" (click)="updateEmployee(employee.identification)">
             <i class="material-icons">border_color</i>
           </button>
         </td>
         <td>
-          <button class="btn btn-danger" (click)="deleteproduct(employee.identification)">
+          <button class="btn btn-danger" (click)="deleteEmployee(employee.identification)">
             <i class="material-icons">delete_forever</i>
           </button>
         </td>
       </tr>
     </tbody>
   </table>
+
+  <button type="button" class="btn btn-dark" (click)="exportExcel()">
+    Exportar a Excel
+  </button>
 </div>

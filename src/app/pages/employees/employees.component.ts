@@ -26,12 +26,21 @@ export class EmployeesComponent {
       });
   }
 
-  deleteproduct(id: string){
+  deleteEmployee(id: string){
     window.location.assign(`${document.baseURI}/employee?action=delete&id=${id}`);
   }
 
-  updateproduct(id: string){
+  updateEmployee(id: string){
     window.location.assign(`${document.baseURI}/employee?action=update&id=${id}`);    
   }
 
+  exportExcel(): void {
+    if(this.employees.length == 0){
+      this._utilsService.openSnackBarError("No hay datos para exportar");
+      return;
+    }
+
+    this._utilsService.exportToExcel(this.employees);
+  }
 }
+                                                                                
